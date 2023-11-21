@@ -145,7 +145,7 @@ int main()
 
                 break;
 
-                case 8:
+            case 8:
                 // searching an element
                 printf("\nEnter the number you are looking for : ");
                 scanf("%d", &num);
