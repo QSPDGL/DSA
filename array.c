@@ -35,8 +35,8 @@ int main()
             printf("\n\t1.Add element at begnning\n\t2.Add element in middle\n\t3.Add element at last\n");
             printf("\t4.Update an element");
             printf("\n\t5.Delete element at begnning\n\t6.Delete element in middle\n\t7.Delete element at last\n");
-            printf("\t8.Print code\n");
-            printf("\t9.Search element\n");
+            printf("\t8.Search element\n");
+            printf("\t9.Print code\n");
             printf("\t10.Exit code\n");
             printf("\nEnter your choice : ");
             scanf("%d", &ch);
@@ -145,17 +145,7 @@ int main()
 
                 break;
 
-            case 8:
-                // print code
-                printf("\nArray : \n\t");
-                for (int i = 0; i < n; i++)
-                {
-                    printf("%d)%d ", i + 1, arr[i]);
-                }
-
-                break;
-
-            case 9:
+                case 8:
                 // searching an element
                 printf("\nEnter the number you are looking for : ");
                 scanf("%d", &num);
@@ -167,7 +157,21 @@ int main()
                         int index = i + 1;
                         break;
                     }
+                    else{
+                        printf("\nElement not found!!!\n\n");
+                        break;
+                    }
                     elem++;
+                }
+
+                break;
+
+            case 9:
+                // print code
+                printf("\nArray : \n\t");
+                for (int i = 0; i < n; i++)
+                {
+                    printf("%d)%d ", i + 1, arr[i]);
                 }
 
                 printf("The element %d is found in index %d\n", num, elem + 1);
