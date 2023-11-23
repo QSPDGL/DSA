@@ -149,19 +149,23 @@ int main()
                 // searching an element
                 printf("\nEnter the number you are looking for : ");
                 scanf("%d", &num);
+                int found = 0, index;
 
                 for (int i = 0; i < n; i++)
                 {
                     if (arr[i] == num)
                     {
-                        int index = i + 1;
+                        found = 1;
+                        index = i + 1;
                         break;
                     }
-                    else{
-                        printf("\nElement not found!!!\n\n");
-                        break;
-                    }
-                    elem++;
+                }
+
+                if (found == 1){
+                    printf("\nElement found at index %d.\n", index);
+                }
+                else{
+                    printf("\nElement not found!\n");
                 }
 
                 break;
