@@ -21,15 +21,15 @@ int main()
 {
     int c = 1, ch;
 
-    struct Node *head;
-    struct Node *second;
-    struct Node *third;
-    struct Node *fourth;
+    struct Node *head = (struct Node *)malloc(sizeof(struct Node));
+    struct Node *second = (struct Node *)malloc(sizeof(struct Node));
+    struct Node *third = (struct Node *)malloc(sizeof(struct Node));
+    struct Node *fourth = (struct Node *)malloc(sizeof(struct Node));
 
-    head = (struct Node *)malloc(sizeof(struct Node));
-    second = (struct Node *)malloc(sizeof(struct Node));
-    third = (struct Node *)malloc(sizeof(struct Node));
-    fourth = (struct Node *)malloc(sizeof(struct Node));
+    head = NULL;
+    second = NULL;
+    third = NULL;
+    fourth = NULL;
 
     head->data = 1;
     head->next = second;
@@ -156,6 +156,12 @@ int main()
 void linkedlistTraversal(struct Node *ptr)
 {
     int i = 1;
+    if (ptr == NULL)
+    {
+        printf("\nThe list is empty.\n");
+        return;
+    }
+    
     while (ptr != NULL)
     {
         printf("Element %d: %d\n", i, ptr->data);
@@ -250,14 +256,14 @@ struct Node *DeleteAtIndex(struct Node *head, int index)
 
     if (index == 1)
     {
-        DeleteAtFirst(head);
+        head = DeleteAtFirst(head);
         printf("\nElement deleted\n");
 
         return head;
     }
     else if (index == listLength)
     {
-        DeleteAtEnd(head);
+        head = DeleteAtEnd(head);
         printf("\nElement deleted\n");
 
         return head;
