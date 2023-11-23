@@ -21,15 +21,15 @@ int main()
 {
     int c = 1, ch;
 
-    struct Node *head = (struct Node *)malloc(sizeof(struct Node));
-    struct Node *second = (struct Node *)malloc(sizeof(struct Node));
-    struct Node *third = (struct Node *)malloc(sizeof(struct Node));
-    struct Node *fourth = (struct Node *)malloc(sizeof(struct Node));
+    struct Node *head = NULL;
+    struct Node *second = NULL;
+    struct Node *third = NULL;
+    struct Node *fourth = NULL;
 
-    head = NULL;
-    second = NULL;
-    third = NULL;
-    fourth = NULL;
+    head = (struct Node *)malloc(sizeof(struct Node));
+    second = (struct Node *)malloc(sizeof(struct Node));
+    third = (struct Node *)malloc(sizeof(struct Node));
+    fourth = (struct Node *)malloc(sizeof(struct Node));
 
     head->data = 1;
     head->next = second;
