@@ -72,9 +72,14 @@ int main(){
             loop = 0;
             break;
         }
+        else if (size > 10)
+        {
+            cout << "\nSize exceeding... Try again!\n\n";
+            continue;
+        }
         else
         {
-            cout << "\nInvalid input... Try again!\n\n";
+            cout << "\nSize subceeding... Try again!\n\n";
             continue;
         }
     }
